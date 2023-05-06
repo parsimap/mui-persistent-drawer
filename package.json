@@ -1,5 +1,5 @@
 {
-  "name": "mui-persistent-drawer",
+  "name": "@parsimap/mui-persistent-drawer",
   "version": "1.0.0",
   "description": "This is a drawer to toggle between two panels.",
   "main": "PersistentDrawer.tsx",
