@@ -1,9 +1,28 @@
 {
   "name": "@parsimap/mui-persistent-drawer",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This is a drawer to toggle between two panels.",
   "main": "PersistentDrawer.tsx",
-  "repository": "https://github.com/parsimap/mui-presistent-drawer.git",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/parsimap/mui-presistent-drawer.git"
+  },
   "license": "MIT",
-  "private": false
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "bugs": {
+    "url": "https://github.com/parsimap/mui-presistent-drawer/issues"
+  },
+  "homepage": "https://github.com/parsimap/mui-presistent-drawer#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "peerDependencies": {
+    "@types/react": "^18.0.0"
+  }
 }
