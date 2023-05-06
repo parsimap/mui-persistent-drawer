@@ -17,14 +17,14 @@ const ButtonContent = ({
   title: string;
   icon: React.ElementType;
 }) => (
-  <>
+  <React.Fragment>
     <Typography variant={"caption"}>{title}</Typography>
     <SvgIcon
       component={icon}
       fontSize={"small"}
       sx={{ transform: "rotate(90deg)" }}
     />
-  </>
+  </React.Fragment>
 );
 
 const WIDTH = 40;

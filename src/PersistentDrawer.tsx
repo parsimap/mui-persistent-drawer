@@ -1,6 +1,6 @@
 import Drawer, { drawerClasses, DrawerProps } from "@mui/material/Drawer";
 import ToggleButton from "./ToggleButton";
-import { useEffect, useState } from "react";
+import * as React from "react";
 
 interface IProps extends DrawerProps {
   scroll?: boolean;
@@ -19,9 +19,9 @@ const PersistentDrawer = ({
   onOpenChange,
   ...rest
 }: IProps) => {
-  const [open, setOpen] = useState(propsOpen);
+  const [open, setOpen] = React.useState(propsOpen);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setOpen(propsOpen);
   }, [propsOpen]);
 
@@ -31,7 +31,7 @@ const PersistentDrawer = ({
   };
 
   return (
-    <>
+    <React.Fragment>
       <ToggleButton
         open={open}
         right={right}
@@ -64,7 +64,7 @@ const PersistentDrawer = ({
         {...rest}
         open={open}
       />
-    </>
+    </React.Fragment>
   );
 };
 
