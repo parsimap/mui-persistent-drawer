@@ -1,8 +1,8 @@
 {
   "name": "@parsimap/mui-persistent-drawer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a drawer to toggle between two panels.",
-  "main": "PersistentDrawer.tsx",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/parsimap/mui-presistent-drawer.git"
