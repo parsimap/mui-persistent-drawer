@@ -1,8 +1,8 @@
 {
   "name": "@parsimap/mui-persistent-drawer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is a drawer to toggle between two panels.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/parsimap/mui-presistent-drawer.git"
@@ -18,11 +18,18 @@
   },
   "homepage": "https://github.com/parsimap/mui-presistent-drawer#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "microbundle-crl --compress --format cjs"
   },
   "keywords": [],
   "author": "",
-  "peerDependencies": {
-    "@types/react": "^18.0.0"
+  "devDependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.3",
+    "microbundle-crl": "^0.13.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
