@@ -1,6 +1,6 @@
 {
   "name": "@parsimap/mui-persistent-drawer",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "This is a drawer to toggle between two panels.",
   "main": "dist/index.js",
   "repository": {
@@ -28,11 +28,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.3",
-    "microbundle-crl": "^0.13.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "prettier": "^2.8.8"
   }
 }
