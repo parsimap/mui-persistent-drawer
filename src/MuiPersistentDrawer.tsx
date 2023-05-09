@@ -10,7 +10,7 @@ interface IProps extends DrawerProps {
   onOpenChange?: (open: boolean) => void;
 }
 
-const PersistentDrawer = ({
+const MuiPersistentDrawer = ({
   open: propsOpen = true,
   width,
   scroll,
@@ -68,4 +68,4 @@ const PersistentDrawer = ({
   );
 };
 
-export default PersistentDrawer;
+export default MuiPersistentDrawer;

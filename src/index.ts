@@ -1,3 +1,3 @@
-import PersistentDrawer from "./PersistentDrawer";
+import MuiPersistentDrawer from "./MuiPersistentDrawer";
 
-export default PersistentDrawer;
+export default MuiPersistentDrawer;
