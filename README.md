@@ -30,7 +30,7 @@
 
 * The package name is renamed from mui-presistent-drawer to mui-persistent-drawer and corrected in the project.
 
-### version `1.0.7`
+### version `1.0.8`
 
 * The documentation is rewrite in the case of separation the optional and required arguments.
 * Add the ability to customizing title of the toggle button when it is opened or closed.
