@@ -2,7 +2,7 @@
 
 # Arguments
 
-| argument     | type     | default     | description                           |
+| title        | type     | default     | description                           |
 |--------------|----------|-------------|---------------------------------------|
 | `openTitle`  | `string` | `undefined` | a title when drawer is need to opened |
 | `closeTitle` | `string` | `undefined` | a title when drawer is need to closed |
@@ -10,7 +10,7 @@
 
 ## Optional Arguments
 
-| argument       | type       | default     | description                            |
+| title          | type       | default     | description                            |
 |----------------|------------|-------------|----------------------------------------|
 | `scroll`       | `boolean`  | `false`     | to have scroll in drawer               |
 | `right`        | `number`   | `undefined` | to move drawer to left                 |
@@ -41,20 +41,20 @@
 import MuiPersistentDrawer from '@parsimap/MuiPersistentDrawer';
 
 const App = () => {
-	function handleOpenChange(state: boolean) {
-		if (state) {
-			// Drawer is opend 
-		}
-	}
+    function handleOpenChange(state: boolean) {
+        if (state) {
+            // Drawer is opend 
+        }
+    }
 
-	return (
-		<MuiPersistentDrawer
-			width={400}
-			openTitle={"Close Details"}
-			closeTitle={"Close Details"}
-			onOpenChange={handleOpenChange}
-		/>
-	)
+    return (
+        <MuiPersistentDrawer
+            width={400}
+            openTitle={"Close Details"}
+            closeTitle={"Close Details"}
+            onOpenChange={handleOpenChange}
+        />
+    )
 }
 
 export default App;
