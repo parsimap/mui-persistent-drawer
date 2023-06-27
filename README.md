@@ -19,6 +19,10 @@
 
 ## Changelog
 
+### Version: `1.0.9`
+
+* The direction issues were resolved and completely supported ltr as well as rtl direction. 
+
 ### Version: `1.0.5`
 
 * The right property was added to a component to adapt that with another component on the right side of the main
@@ -41,20 +45,20 @@
 import MuiPersistentDrawer from '@parsimap/MuiPersistentDrawer';
 
 const App = () => {
-    function handleOpenChange(state: boolean) {
-        if (state) {
-            // Drawer is opend 
-        }
+  function handleOpenChange(state: boolean) {
+    if (state) {
+      // Drawer is opend 
     }
+  }
 
-    return (
-        <MuiPersistentDrawer
-            width={400}
-            openTitle={"Close Details"}
-            closeTitle={"Close Details"}
-            onOpenChange={handleOpenChange}
-        />
-    )
+  return (
+    <MuiPersistentDrawer
+      width={400}
+      openTitle={"Close Details"}
+      closeTitle={"Open Details"}
+      onOpenChange={handleOpenChange}
+    />
+  )
 }
 
 export default App;
