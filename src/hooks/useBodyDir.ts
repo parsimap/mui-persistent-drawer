@@ -1,20 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+import * as React from "react";
 
 const useBodyDir = () => {
-  const prevDir = useRef<DirType>();
+  const prevDir = React.useRef<DirType>();
   type DirType = "rtl" | "ltr" | string;
 
-  const [dir, setDir] = useState<DirType>();
+  const [dir, setDir] = React.useState<DirType>();
 
-  useEffect(() => {
+  React.useEffect(() => {
     prevDir.current = dir;
   }, [dir]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setDir(document.body.style.direction);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     function handleStyleChanged(mutations: MutationRecord[]) {
       const newDir = (mutations[0].target as HTMLBodyElement).style.direction;
 

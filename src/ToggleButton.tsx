@@ -10,7 +10,7 @@ interface IProps extends ButtonProps {
   right: number;
   openTitle: string;
   closeTitle: string;
-  bodyDir: string;
+  bodyDir?: string;
 }
 
 const ButtonContent = ({
@@ -30,7 +30,7 @@ const ButtonContent = ({
   </React.Fragment>
 );
 
-const WIDTH = 40;
+const WIDTH = 80;
 const HEIGHT = 30;
 
 const ToggleButton = ({
@@ -45,24 +45,24 @@ const ToggleButton = ({
   return (
     <Button
       {...rest}
-      variant={"contained"}
       size={"small"}
+      variant={"contained"}
       sx={{
-        left: -(WIDTH / 2) + right,
+        top: "50%",
         width: WIDTH,
         height: HEIGHT,
-        top: "50%",
-        position: "fixed",
-        transform: "rotate(90deg)",
         display: "flex",
-        flexDirection: "row",
+        position: "fixed",
         alignItems: "center",
+        flexDirection: "row",
         justifyContent: "center",
+        left: -(WIDTH / 3) + right,
+        transform: "rotate(90deg)",
+        zIndex: (theme) => theme.zIndex.drawer + 1,
         borderTopLeftRadius: bodyDir === "rtl" ? "unset" : undefined,
         borderTopRightRadius: bodyDir === "rtl" ? "unset" : undefined,
         borderBottomLeftRadius: bodyDir === "ltr" ? "unset" : undefined,
         borderBottomRightRadius: bodyDir === "ltr" ? "unset" : undefined,
-        zIndex: (theme) => theme.zIndex.drawer + 1,
       }}
     >
       {open ? (
