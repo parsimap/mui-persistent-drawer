@@ -1,4 +1,4 @@
-# Persistent Drawer
+# Mui Persistent Drawer
 
 # Arguments
 
@@ -21,7 +21,7 @@
 
 ### Version: `1.0.9`
 
-* The direction issues were resolved and completely supported ltr as well as rtl direction. 
+* The direction issues were resolved and completely supported ltr as well as rtl direction.
 
 ### Version: `1.0.5`
 
