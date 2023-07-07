@@ -1,7 +1,7 @@
 import Drawer, { drawerClasses, DrawerProps } from "@mui/material/Drawer";
 import ToggleButton from "./ToggleButton";
 import * as React from "react";
-import useBodyDir from "./hooks/useBodyDir";
+import useBodyDir from "../hooks/useBodyDir";
 
 interface IProps extends DrawerProps {
   open: boolean;

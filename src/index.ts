@@ -1,3 +1,3 @@
-import MuiPersistentDrawer from "./MuiPersistentDrawer";
+import MuiPersistentDrawer from "./components/MuiPersistentDrawer";
 
 export default MuiPersistentDrawer;
