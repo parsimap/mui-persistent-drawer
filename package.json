@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/parsimap/mui-presistent-drawer.git"
+    "url": "git://github.com/parsimap/mui-persistent-drawer.git"
   },
   "license": "MIT",
   "private": false,
@@ -14,15 +14,15 @@
     "registry": "https://registry.npmjs.org"
   },
   "bugs": {
-    "url": "https://github.com/parsimap/mui-presistent-drawer/issues"
+    "url": "https://github.com/parsimap/mui-persistent-drawer/issues"
   },
-  "homepage": "https://github.com/parsimap/mui-presistent-drawer#readme",
+  "homepage": "https://github.com/parsimap/mui-persistent-drawer#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "microbundle-crl --compress --format cjs"
   },
   "keywords": [],
-  "author": "",
+  "author": "mu",
   "peerDependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
