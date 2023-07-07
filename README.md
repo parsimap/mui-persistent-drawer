@@ -42,7 +42,7 @@
 ## Usage
 
 ```tsx
-import MuiPersistentDrawer from '@parsimap/MuiPersistentDrawer';
+import MuiPersistentDrawer from '@parsimap/mui-persistent-drawer';
 
 const App = () => {
   function handleOpenChange(state: boolean) {
