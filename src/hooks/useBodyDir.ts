@@ -1,26 +1,28 @@
 import * as React from "react";
 
-const useBodyDir = () => {
+const getBodyDirection = (body: HTMLElement) =>
+  body.dir || body.style.direction;
+
+export default function useBodyDir() {
   const prevDir = React.useRef<DirType>();
   type DirType = "rtl" | "ltr" | string;
 
   const [dir, setDir] = React.useState<DirType>();
 
   React.useEffect(() => {
-    prevDir.current = dir;
-  }, [dir]);
-
-  React.useEffect(() => {
-    setDir(document.body.style.direction);
+    const newDir = getBodyDirection(document.body);
+    prevDir.current = newDir;
+    setDir(newDir);
   }, []);
 
   React.useEffect(() => {
     function handleStyleChanged(mutations: MutationRecord[]) {
-      const body = (mutations[0].target as HTMLBodyElement);
-      const newDir = body.dir || body.style.direction;
+      const body = mutations[0].target as HTMLBodyElement;
+      const newDir = getBodyDirection(body);
 
       if (newDir !== prevDir.current) {
-        setDir(document.body.style.direction);
+        setDir(newDir);
+        prevDir.current = newDir;
       }
     }
 
@@ -35,6 +37,6 @@ const useBodyDir = () => {
   }, []);
 
   return dir;
-};
+}
 
-export default useBodyDir;
+

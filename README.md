@@ -10,12 +10,13 @@
 
 ## Optional Arguments
 
-| title          | type       | default     | description                            |
-|----------------|------------|-------------|----------------------------------------|
-| `scroll`       | `boolean`  | `false`     | to have scroll in drawer               |
-| `right`        | `number`   | `undefined` | to move drawer to left                 |
-| `top`          | `number`   | `undefined` | to move drawer to bottom               |
-| `onOpenChange` | `function` | `undefined` | recognize when the drawer state change |
+| title          | type          | default     | description                            |
+|----------------|---------------|-------------|----------------------------------------|
+| `scroll`       | `boolean`     | `false`     | to have scroll in drawer               |
+| `right`        | `number`      | `undefined` | to move drawer to left                 |
+| `top`          | `number`      | `undefined` | to move drawer to bottom               |
+| `onOpenChange` | `function`    | `undefined` | recognize when the drawer state change |
+| `buttonProps`  | `ButtonProps` | `undefined` | change the toggle button style         |
 
 ## Changelog
 

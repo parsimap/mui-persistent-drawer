@@ -13,23 +13,25 @@ interface IProps extends DrawerProps {
   onOpenChange?: (open: boolean) => void;
   closeTitle: string;
   openTitle: string;
-  buttonProps: ButtonProps;
+  buttonProps?: ButtonProps;
 }
 
 const MuiPersistentDrawer = ({
-                               open: propsOpen = true,
-                               width,
-                               scroll,
-                               top = 0,
-                               right = 0,
-                               onOpenChange,
-                               closeTitle,
-                               openTitle,
-                               buttonProps,
-                               ...rest
-                             }: IProps) => {
+  open: propsOpen = true,
+  width,
+  scroll,
+  top = 0,
+  right = 0,
+  onOpenChange,
+  closeTitle,
+  openTitle,
+  buttonProps,
+  ...rest
+}: IProps) => {
   const bodyDir = useBodyDir();
   const [open, setOpen] = React.useState(propsOpen);
+
+  console.log(bodyDir);
 
   React.useEffect(() => {
     setOpen(propsOpen);
@@ -59,7 +61,7 @@ const MuiPersistentDrawer = ({
           width: open ? width : 0,
           flexShrink: 0,
           [theme.breakpoints.down("md")]: {
-            width: "100%"
+            width: "100%",
           },
           [`& .${drawerClasses.paper}`]: {
             width,
@@ -75,9 +77,9 @@ const MuiPersistentDrawer = ({
             overflowY: scroll ? "auto" : "hidden",
             padding: theme.spacing(2, 2, 2, 4),
             [theme.breakpoints.down("md")]: {
-              width: "100%"
-            }
-          }
+              width: "100%",
+            },
+          },
         })}
         open={open}
       />
