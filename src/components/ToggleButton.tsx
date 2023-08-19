@@ -63,6 +63,7 @@ const ToggleButton = ({
         borderTopRightRadius: bodyDir === "rtl" ? "unset" : undefined,
         borderBottomLeftRadius: bodyDir === "ltr" ? "unset" : undefined,
         borderBottomRightRadius: bodyDir === "ltr" ? "unset" : undefined,
+        ...rest.sx
       }}
     >
       {open ? (

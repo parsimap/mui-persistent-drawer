@@ -16,7 +16,8 @@ const useBodyDir = () => {
 
   React.useEffect(() => {
     function handleStyleChanged(mutations: MutationRecord[]) {
-      const newDir = (mutations[0].target as HTMLBodyElement).style.direction;
+      const body = (mutations[0].target as HTMLBodyElement);
+      const newDir = body.dir || body.style.direction;
 
       if (newDir !== prevDir.current) {
         setDir(document.body.style.direction);
@@ -25,7 +26,7 @@ const useBodyDir = () => {
 
     const observer = new MutationObserver(handleStyleChanged);
     observer.observe(document.body, {
-      attributeFilter: ["style"],
+      attributeFilter: ["style", "dir"]
     });
 
     return () => {
