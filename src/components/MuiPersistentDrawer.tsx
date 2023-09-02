@@ -3,6 +3,7 @@ import ToggleButton from "./ToggleButton";
 import * as React from "react";
 import useBodyDir from "../hooks/useBodyDir";
 import { ButtonProps } from "@mui/material/Button";
+import { SystemStyleObject } from "@mui/system/styleFunctionSx/styleFunctionSx";
 
 interface IProps extends DrawerProps {
   open: boolean;
@@ -13,7 +14,7 @@ interface IProps extends DrawerProps {
   onOpenChange?: (open: boolean) => void;
   closeTitle: string;
   openTitle: string;
-  buttonProps?: ButtonProps;
+  toggleButtonProps?: ButtonProps;
 }
 
 const MuiPersistentDrawer = ({
@@ -25,13 +26,11 @@ const MuiPersistentDrawer = ({
   onOpenChange,
   closeTitle,
   openTitle,
-  buttonProps,
+                               toggleButtonProps,
   ...rest
 }: IProps) => {
   const bodyDir = useBodyDir();
   const [open, setOpen] = React.useState(propsOpen);
-
-  console.log(bodyDir);
 
   React.useEffect(() => {
     setOpen(propsOpen);
@@ -51,7 +50,7 @@ const MuiPersistentDrawer = ({
         openTitle={openTitle}
         closeTitle={closeTitle}
         onClick={handleToggleButtonClick}
-        {...buttonProps}
+        {...toggleButtonProps}
       />
       <Drawer
         anchor={bodyDir === "ltr" ? "right" : "left"}
@@ -80,6 +79,7 @@ const MuiPersistentDrawer = ({
               width: "100%",
             },
           },
+          ...(rest.sx as SystemStyleObject)
         })}
         open={open}
       />
