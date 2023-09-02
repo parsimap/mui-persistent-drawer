@@ -10,13 +10,13 @@
 
 ## Optional Arguments
 
-| title          | type          | default     | description                            |
-|----------------|---------------|-------------|----------------------------------------|
-| `scroll`       | `boolean`     | `false`     | to have scroll in drawer               |
-| `right`        | `number`      | `undefined` | to move drawer to left                 |
-| `top`          | `number`      | `undefined` | to move drawer to bottom               |
-| `onOpenChange` | `function`    | `undefined` | recognize when the drawer state change |
-| `buttonProps`  | `ButtonProps` | `undefined` | change the toggle button style         |
+| title               | type          | default     | description                            |
+|---------------------|---------------|-------------|----------------------------------------|
+| `scroll`            | `boolean`     | `false`     | to have scroll in drawer               |
+| `right`             | `number`      | `undefined` | to move drawer to left                 |
+| `top`               | `number`      | `undefined` | to move drawer to bottom               |
+| `onOpenChange`      | `function`    | `undefined` | recognize when the drawer state change |
+| `toggleButtonProps` | `ButtonProps` | `undefined` | change the toggle button style         |
 
 ## Changelog
 
@@ -33,7 +33,7 @@
 
 ### version: `1.0.6`
 
-* The package name is renamed from mui-presistent-drawer to mui-persistent-drawer and corrected in the project.
+* The package name is renamed from mui-persistent-drawer to mui-persistent-drawer and corrected in the project.
 
 ### version `1.0.8`
 
